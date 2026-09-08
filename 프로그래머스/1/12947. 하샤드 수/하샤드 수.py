@@ -1,12 +1,6 @@
-def solution(x):
-    answer = True
-    arr = []
-    is_hashad = x
-    while x != 0:
-        arr.append(x%10)
-        x = x//10
-
-    if is_hashad % sum(arr):
+def solution(n):
+    
+    harshad = sum(map(int, str(n)))
+    if n%harshad:
         return False
     return True
-

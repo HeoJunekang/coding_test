@@ -1,14 +1,7 @@
 def solution(n):
-    answer = 0
-    i = 1
-    while True:
-        if i*i == n:
-            answer = (i+1)*(i+1)
-            break
-        elif i*i > n:
-            answer = -1
-            break
-        else:
-            i+=1
-            continue
-    return answer
+    nn = n **(1/2)
+    if nn %1 ==0:
+        return (nn+1) **2
+    else:
+        return -1
+    
